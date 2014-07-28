@@ -6,7 +6,6 @@
  */
 
   require('../src/Wechat.php');
-  require('data.php');
 
   /**
    * 微信公众平台演示类
@@ -20,8 +19,6 @@
      */
     protected function onSubscribe() {
       $this->responseText('欢迎关注');
-      $this->responseNews();
-      
     }
 
     /**
@@ -39,8 +36,6 @@
      * @return void
      */
     protected function onUnsubscribe() {
-      $this->responseNews();
-
       // 「悄悄的我走了，正如我悄悄的来；我挥一挥衣袖，不带走一片云彩。」
     }
 
@@ -68,7 +63,14 @@
      * @return void
      */
     protected function onImage() {
-      $this->responseNews();
+      $items = array(
+        new NewsResponseItem('地球一小时', '地球一小时（Earth Hour）是WWF（世界自然基金会）应对全球气候变化所提出的一项倡议', 
+          'http://a0.att.hudong.com/50/61/01300000432220133317610976714_s.jpg', 
+          'http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MTA2NjI0MQ%3D%3D&appmsgid=10000305&itemidx=1&scene=1#wechat_redirect'),
+        new NewsResponseItem('标题二', '描述二', $this->getRequest('picurl'), $this->getRequest('picurl')),
+      );
+
+      $this->responseNews($items);
     }
 
     /**
@@ -107,9 +109,7 @@
      * @return void
      */
     protected function onClick() {
-      $this->responseNews();
-
-      // $this->responseText('你点击了菜单：' . $this->getRequest('EventKey'));
+      $this->responseText('你点击了菜单：' . $this->getRequest('EventKey'));
     }
 
     /**
@@ -119,19 +119,6 @@
      */
     protected function onUnknown() {
       $this->responseText('收到了未知类型消息：' . $this->getRequest('msgtype'));
-    }
-
-
-    protected function responseNews($funcFlag = 0) {
-      global $articles;
-      $article_1 = $articles[rand(1,30)];
-      $a_2 = $articles[rand(1,30)];
-      $items = array(
-        new NewsResponseItem($article_1->title,$article_1->summary,$article_1->pic_url,$article_1->article_url),
-        new NewsResponseItem($a_2->title,$a_2->summary,$a_2->pic_url,$a_2->article_url),
-      );
-
-      exit(new NewsResponse($this->getRequest('fromusername'), $this->getRequest('tousername'), $items, $funcFlag));
     }
 
   }

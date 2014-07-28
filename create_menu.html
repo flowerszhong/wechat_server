@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>微信公众号：自定义菜单</title>
+</head>
+<body>
+
+<h3 class="title">
+	获取token
+</h3>
+<table>
+	<tr>
+		<td>AppID</td>
+		<td>
+			<input type="text" id="appid" value="wx4b644d8834af53a9" size="60" />
+		</td>
+	</tr>
+	<tr>
+		<td>AppSecret</td>
+		<td>
+			<input type="text" id="secret" value="1f978a292133d3b4f7f93522ccd5cb6e" size="60" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+		</td>
+		<td>
+			<input type="button" id="submit" value="取得token" />
+		</td>
+	</tr>
+</table>
+
+<div>
+	token: <input type="text" value="" size="100" id="token"/>
+</div>
+
+<h3 class="title">
+	自定义菜单
+</h3>
+
+<textarea style="width:500px;height:600px;" id="button-json">
+	
+</textarea>
+
+<input type="button" id="btn-create" value="自定义菜单" />
+
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+
+<script type="text/javascript">
+	$(function () {
+		$("#submit").click(function () {
+			var appid = $("#appid").val(),
+				secret = $("#secret").val();
+
+			var token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid +"&secret="+secret ;
+
+			$.ajax({
+	          type: "GET",
+	          url: token_url,
+	          success: function  (data) {
+	           	if(data && data['access_token']){
+	           		$("#token").val(data['access_token']);
+	           	}
+	          },
+	          dataType: "json"
+	        });
+		})
+	});
+
+	$("#btn-create").click(function () {
+		var tokenStr = $("#token").val();
+		var url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + tokenStr;
+
+		$.ajax({
+	          type: "POST",
+	          url: url,
+	          data: {
+				     "button":[
+				     {	
+				          "type":"click",
+				          "name":"今日歌曲",
+				          "key":"V1001_TODAY_MUSIC"
+				      },
+				      {
+				           "type":"click",
+				           "name":"歌手简介",
+				           "key":"V1001_TODAY_SINGER"
+				      },
+				      {
+				           "name":"菜单",
+				           "sub_button":[
+				           {	
+				               "type":"view",
+				               "name":"搜索",
+				               "url":"http://www.soso.com/"
+				            },
+				            {
+				               "type":"view",
+				               "name":"视频",
+				               "url":"http://v.qq.com/"
+				            },
+				            {
+				               "type":"click",
+				               "name":"赞一下我们",
+				               "key":"V1001_GOOD"
+				            }]
+				       }]
+				 },
+	          success: function  (data) {
+	           console.log(data);
+	          },
+	          dataType: "json"
+	        });
+
+	});
+
+</script>
+
+</body>
+</html>
