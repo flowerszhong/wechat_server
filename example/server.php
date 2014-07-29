@@ -124,8 +124,8 @@
 
     protected function responseNews($funcFlag = 0) {
       global $articles;
-      $article_1 = $articles[rand(1,30)];
-      $a_2 = $articles[rand(1,30)];
+      $article_1 = $articles[rand(0,29)];
+      $a_2 = $articles[rand(0,29)];
       $items = array(
         new NewsResponseItem($article_1->title,$article_1->summary,$article_1->pic_url,$article_1->article_url),
         new NewsResponseItem($a_2->title,$a_2->summary,$a_2->pic_url,$a_2->article_url),
