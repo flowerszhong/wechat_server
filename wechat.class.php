@@ -40,21 +40,21 @@ class Wechat
 			}, {
 				"name": "查询",
 				"sub_button": [{
-					"type": "click",
+					"type": "view",
 					"name": "4s维修店",
-					"key": "1101"
+					"url": "http://weixin.gdepc.cn/query.php"
 				}, {
-					"type": "click",
+					"type": "view",
 					"name": "检测机构",
-					"key": "2101"
+					"url": "http://weixin.gdepc.cn/query.php"
 				}, {
-					"type": "click",
+					"type": "view",
 					"name": "检测期限",
-					"key": "2201"
+					"url": "http://weixin.gdepc.cn/query.php"
 				}, {
-					"type": "click",
+					"type": "view",
 					"name": "黄标车",
-					"key": "2001"
+					"url": "http://weixin.gdepc.cn/query.php"
 				}, {
 					"type": "click",
 					"name": "空气质量",
