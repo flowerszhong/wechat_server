@@ -42,7 +42,7 @@ class Wechat
 				"sub_button": [{
 					"type": "view",
 					"name": "4s维修店",
-					"url": "http://weixin.gdepc.cn/query.php"
+					"url": "http://weixin.gdepc.cn/baidu-map.html"
 				}, {
 					"type": "view",
 					"name": "检测机构",

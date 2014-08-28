@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap{width:100%;height:500px;}
+		p{margin-left:5px; font-size:14px;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=77cc754f0f4783a4d39cbe6647fa8f11"></script>
+	<title>查找附近的4S店</title>
+</head>
+<body>
+	<div id="info" style="display:none;">
+		请打开gps定位信息
+	</div>
+	<div id="allmap"></div>
+	<div id="r-result">
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	// 百度地图API功能
+
+	function show_map (pos) {
+		var map = new BMap.Map("allmap");
+		// map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+		map.centerAndZoom(new BMap.Point(pos.coords.latitude, pos.coords.longitude), 11);
+
+		var geolocation = new BMap.Geolocation();
+		geolocation.getCurrentPosition(function(r){
+			if(this.getStatus() == BMAP_STATUS_SUCCESS){
+				var mk = new BMap.Marker(r.point);
+				map.addOverlay(mk);
+				map.panTo(r.point);
+			}
+			else {
+				alert('failed'+this.getStatus());
+			}        
+		},{enableHighAccuracy: true})
+
+
+		// var mapType1 = new BMap.MapTypeControl({mapTypes: [BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]});
+		// var mapType2 = new BMap.MapTypeControl({anchor: BMAP_ANCHOR_TOP_LEFT});
+
+		// var overView = new BMap.OverviewMapControl();
+		// map.addControl(new BMap.NavigationControl());
+		// var overViewOpen = new BMap.OverviewMapControl({isOpen:true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT});
+		
+		var local = new BMap.LocalSearch(map, {
+			renderOptions:{map: map,panel: "r-result"}
+		});
+		local.search("4s店");
+	}
+
+	function handle_error (errors) {
+		// document.getElementById('info').style.display = "block";
+		// var map = new BMap.Map("allmap");
+		// // var point = new BMap.Point(116.331398,39.897445);
+		// // map.centerAndZoom(point,12);
+
+		// function myFun(result){
+		// 	// console.log(result);
+		// 	var cityName = result.name;
+		// 	map.setCenter(cityName);
+
+		// 	var point = new BMap.Point(result.center.lat,result.center.lng);
+		// 	map.centerAndZoom(point,12);
+		// }
+		// var myCity = new BMap.LocalCity();
+		// myCity.get(myFun);
+
+		// var local = new BMap.LocalSearch(map, {
+		// 	renderOptions:{map: map,panel: "r-result"}
+		// });
+		// local.search("4s店");
+	}
+
+	if (navigator.geolocation) { 
+	//如果浏览器支持geolocation，则使用geolocation的getCurrentLocation方法来取得用户当前的地理位置， 
+	//并且在成功取得之后调用show_map()回调函数 
+		// console.log(' Browser support geolocation '); 
+		navigator.geolocation.getCurrentPosition(show_map,handle_error ,null); 
+	} else { 
+		// console.log(' Browser doesnt support geolocation '); 
+	} 
+
+
+
+	
+</script>
