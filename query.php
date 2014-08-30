@@ -15,11 +15,16 @@
 		text-align: right;
 		font-weight: bold;
 	}
+
+	.custom_container{
+		padding:20px;
+	}
+
 	</style>
 </head>
 <body>
 
-<div class="container">
+<div class="custom_container">
 	<button type="button" class="btn btn-primary btn-lg btn-block">&gt;&gt;机动车状态查询&lt;&lt;</button>
 
 	 <form class="form-inline" role="form">

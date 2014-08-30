@@ -46,19 +46,19 @@ class Wechat
 				}, {
 					"type": "view",
 					"name": "检测机构",
-					"url": "http://weixin.gdepc.cn/query.php"
+					"url": "http://weixin.gdepc.cn/inquery/index.php?r=YellowCars/search"
 				}, {
 					"type": "view",
 					"name": "检测期限",
-					"url": "http://weixin.gdepc.cn/query.php"
+					"url": "http://weixin.gdepc.cn/inquery/index.php?r=YellowCars/search"
 				}, {
 					"type": "view",
 					"name": "黄标车",
-					"url": "http://weixin.gdepc.cn/query.php"
+					"url": "http://weixin.gdepc.cn/inquery/index.php?r=YellowCars/search"
 				}, {
-					"type": "click",
+					"type": "view",
 					"name": "空气质量",
-					"key": "2002"
+					"url": "http://www.pm25.in/guangzhou"
 				}]
 			}, {
 				"name": "更多",
