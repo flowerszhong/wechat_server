@@ -110,3 +110,569 @@ Stack trace:
 #28 {main}
 REQUEST_URI=/wechat_server/inquery/index.php?r=yellowCars/search
 ---
+2014/09/01 15:00:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view?id=1".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('view?id=1')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('view?id=1')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('yellowCars/view...')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=yellowCars/view?id=1
+---
+2014/09/01 15:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 15:54:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 15:54:43 [error] [exception.CException] exception 'CException' with message 'Property "Vehicle.car_id" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('car_id')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('car_id')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Vehicle), 'car_id')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Vehicle), 'car_id', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Vehicle), 'car_id', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(45): CActiveForm->textField(Object(Vehicle), 'car_id', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/admin.php(40): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(143): CController->render('admin', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionAdmin()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/admin')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 15:54:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 15:56:43 [error] [exception.CException] exception 'CException' with message 'Property "Vehicle.car_type" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('car_type')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('car_type')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Vehicle), 'car_type')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Vehicle), 'car_type', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Vehicle), 'car_type', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(69): CActiveForm->textField(Object(Vehicle), 'car_type', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/admin.php(40): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(143): CController->render('admin', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionAdmin()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/admin')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 15:57:24 [error] [exception.CException] exception 'CException' with message 'Property "Vehicle.verifyCode" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('verifyCode')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('verifyCode')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Vehicle), 'verifyCode')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Vehicle), 'verifyCode', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Vehicle), 'verifyCode', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(94): CActiveForm->textField(Object(Vehicle), 'verifyCode', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/admin.php(40): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(143): CController->render('admin', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionAdmin()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/admin')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 15:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('captcha')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=540426fa96f6f
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 15:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:01:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:01:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:02:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('captcha')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=5404281a6f65d
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 16:02:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:02:57 [error] [exception.CException] exception 'CException' with message 'Property "YellowCars.hphm" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('hphm')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('hphm')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(YellowCars), 'hphm')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(YellowCars), 'hphm', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(YellowCars), 'hphm', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(45): CActiveForm->textField(Object(YellowCars), 'hphm', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/search.php(6): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(162): CController->render('search', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionSearch()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:05:00 [error] [exception.CException] exception 'CException' with message 'Property "YellowCars.hphm" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('hphm')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('hphm')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(YellowCars), 'hphm')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(YellowCars), 'hphm', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(YellowCars), 'hphm', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(45): CActiveForm->textField(Object(YellowCars), 'hphm', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/search.php(6): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(162): CController->render('search', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionSearch()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/search')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:07:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('captcha')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=5404292b7d3ce
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(270): CController->missingAction('captcha')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#3 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409558830278
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:09:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=540429a5c1382
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:09:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409558955649
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:09:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409558956308
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:09:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=540429c583bd9
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:16:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=54042b4de74f6
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:16:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409559377304
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:16:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409559378266
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:16:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&refresh=1&_=1409559379120
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 16:17:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CCaptchaAction), Array)
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('captcha')
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/captcha')
+#9 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/captcha&v=54042b87ee459
+HTTP_REFERER=http://192.168.22.150:1988/wechat_server/inquery/index.php?r=vehicle/search
+---
+2014/09/01 20:45:41 [error] [exception.CException] exception 'CException' with message 'Property "Vehicle.verifyCode" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('verifyCode')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('verifyCode')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Vehicle), 'verifyCode')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Vehicle), 'verifyCode', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Vehicle), 'verifyCode', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/_search.php(94): CActiveForm->textField(Object(Vehicle), 'verifyCode', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/vehicle/admin.php(40): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/VehicleController.php(136): CController->render('admin', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): VehicleController->actionAdmin()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('vehicle/admin')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=vehicle/admin
+---
+2014/09/01 22:05:10 [error] [exception.CException] exception 'CException' with message 'TblCarTestController cannot find the requested view "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#1 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/TblCarTestController.php(159): CController->render('search', Array)
+#2 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): TblCarTestController->actionSearch()
+#3 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('tblcartest/sear...')
+#13 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=tblcartest/search
+---
+2014/09/01 22:06:14 [error] [exception.CException] exception 'CException' with message 'TblCarTestController cannot find the requested view "search".' in /Users/janice/Projects/php/yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#1 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/TblCarTestController.php(159): CController->render('search', Array)
+#2 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): TblCarTestController->actionSearch()
+#3 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('tblcartest/sear...')
+#13 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=tblcartest/search
+---
+2014/09/01 22:07:08 [error] [exception.CException] exception 'CException' with message 'Property "TblCarTest.hpzl" is not defined.' in /Users/janice/Projects/php/yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/janice/Projects/php/yii/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('hpzl')
+#1 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('hpzl')
+#2 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(TblCarTest), 'hpzl')
+#3 /Users/janice/Projects/php/yii/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(TblCarTest), 'hpzl', Array)
+#4 /Users/janice/Projects/php/yii/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(TblCarTest), 'hpzl', Array)
+#5 /Users/janice/Projects/php/wechat_server/inquery/protected/views/tblCarTest/_search.php(57): CActiveForm->textField(Object(TblCarTest), 'hpzl', Array)
+#6 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#7 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#8 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#9 /Users/janice/Projects/php/wechat_server/inquery/protected/views/tblCarTest/search.php(6): CController->renderPartial('_search', Array)
+#10 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(126): require('/Users/janice/P...')
+#11 /Users/janice/Projects/php/yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/janice/P...', Array, true)
+#12 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/janice/P...', Array, true)
+#13 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#14 /Users/janice/Projects/php/wechat_server/inquery/protected/controllers/TblCarTestController.php(159): CController->render('search', Array)
+#15 /Users/janice/Projects/php/yii/yii/framework/web/actions/CInlineAction.php(49): TblCarTestController->actionSearch()
+#16 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/janice/Projects/php/yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/janice/Projects/php/yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/janice/Projects/php/yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /Users/janice/Projects/php/yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('tblcartest/sear...')
+#26 /Users/janice/Projects/php/yii/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/janice/Projects/php/wechat_server/inquery/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/wechat_server/inquery/index.php?r=tblcartest/search
+---

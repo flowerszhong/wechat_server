@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $json_str = '[{
 	"title": "中国电商聪明人都在为日本人打工？",
@@ -153,4 +153,4 @@ $json_str = '[{
 }]';
 
 $articles = json_decode($json_str);
- ?>
+?>

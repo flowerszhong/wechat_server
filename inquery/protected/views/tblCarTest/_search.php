@@ -1,6 +1,6 @@
 <?php
-/* @var $this YellowCarsController */
-/* @var $model YellowCars */
+/* @var $this VehicleController */
+/* @var $model Vehicle */
 /* @var $form CActiveForm */
 ?>
 <div class="wide form custom_container">
@@ -23,7 +23,7 @@
 	));?>
 <button type="button" class="btn btn-primary btn-lg btn-block">&gt;
 &gt;
-黄标车状态查询&lt;
+机动车检测查询&lt;
 &lt;
 </button>
 
@@ -40,33 +40,23 @@
 		  				<option>粤</option>
 
 		  			</select>
-<?php echo $form->textField($model, 'car_id',
+<?php echo $form->textField($model, 'hphm',
 	array('placeholder' => '请输入车牌号',
 		'class'            => "form-control"));?>
-		  			<?php echo $form->error($model, 'car_id');?>
+		  			<?php echo $form->error($model, 'hphm');?>
 </div>
-	  			(如:GD1805)
+	  			(如:F04961)
 	  		</td>
 	  	</tr>
-	  		<tr>
-	  		<td>
-	  			号牌种类
-	  		</td>
-	  		<td>
-<?php echo $form->textField($model, 'plate_type', array('placeholder' => '请输入号牌种类',
-		'class'                                                             => "form-control"));?>
-</td>
 
-	  	</tr>
 
-	  	</tr>
 	  		<tr>
 	  		<td>
 	  			车辆类型
 	  		</td>
 	  		<td>
-<?php echo $form->textField($model, 'car_type', array('placeholder' => '请输入车辆类型',
-		'class'                                                           => "form-control"));?>
+<?php echo $form->textField($model, 'cllx', array('placeholder' => '请输入车辆类型',
+		'class'                                                       => "form-control"));?>
 </td>
 
 	  	</tr>
